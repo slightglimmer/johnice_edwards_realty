@@ -118,6 +118,7 @@ p { margin: 0; }
 .photo {
   position: relative; overflow: hidden;
   aspect-ratio: var(--ratio, 16 / 10);
+  isolation: isolate;
   background: var(--tone, var(--sage-light));
   border-radius: var(--radius);
 }
@@ -221,7 +222,7 @@ p { margin: 0; }
 .hero { padding-top: 56px; padding-bottom: 88px; }
 .hero-media { position: relative; }
 .hero-card {
-  position: absolute; left: -12px; bottom: 56px; max-width: 280px;
+  position: absolute; z-index: 2; left: -12px; bottom: 56px; max-width: 280px;
   background: var(--paper); border-radius: 20px; padding: 20px 22px;
   text-decoration: none; color: var(--charcoal);
   box-shadow: 0 20px 50px -30px rgba(42, 40, 38, .45);
@@ -237,7 +238,7 @@ p { margin: 0; }
 .pillar strong { display: block; font-family: var(--serif); font-size: 26px; font-weight: 600; }
 .pillar span { font-size: 15px; color: var(--text); }
 
-.feature-card { display: flex; flex-wrap: wrap; margin-bottom: 28px; }
+.feature-card { flex-direction: row; flex-wrap: wrap; margin-bottom: 28px; }
 .feature-card .photo { flex: 1 1 300px; min-height: 320px; aspect-ratio: auto; }
 .feature-card .card-body { flex: 1 1 300px; padding: 36px; justify-content: center; }
 .feature-card h3 { font-size: 36px; line-height: 1.1; }
@@ -372,7 +373,7 @@ p { margin: 0; }
 @media (max-width: 640px) {
   body { font-size: 16px; }
   .section { padding-top: 72px; padding-bottom: 72px; }
-  .hero-card { position: static; margin-top: -48px; margin-left: 16px; }
+  .hero-card { position: relative; left: auto; bottom: auto; margin-top: -48px; margin-left: 16px; }
   .feature-card .card-body { padding: 28px; }
   .feature-card h3 { font-size: 30px; }
 }
