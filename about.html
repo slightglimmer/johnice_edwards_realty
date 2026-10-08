@@ -41,7 +41,7 @@
 <main id="main">
   <section class="wrap split" aria-labelledby="ab-title" style="padding-top:64px;padding-bottom:96px;gap:64px">
     <div class="photo arch tone-stone" style="--ratio: 4 / 5; flex: 0 1 460px; min-width: 260px; border-radius: 240px 240px 28px 28px">
-      <img src="images/01-headshot.jpg" alt="Johnice Edwards" onerror="this.remove()">
+      <img src="images/01-headshot.png" alt="Johnice Edwards" onerror="if(this.dataset.tried){this.remove()}else{this.dataset.tried=1;this.src=this.src.replace(/\.png$/,'.jpg')}">
       <span class="photo-label">Photo 01 · Johnice's headshot</span>
     </div>
     <div class="stack" style="gap:22px">
