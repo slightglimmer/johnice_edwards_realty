@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Figtree:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+  <title>Contact | Johnice Edwards Realty</title>
+  <meta name="description" content="Questions, collaborations, and professional inquiries for Johnice Edwards Realty.">
+  <link rel="canonical" href="https://johniceedwardsrealty.com/contact.html">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Johnice Edwards Realty, home">
+      <span class="brand-name">Johnice Edwards</span>
+      <span class="brand-sub">Realty</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education.html">Real Estate Education</a></li>
+        <li><a href="improvements.html">Home Improvements</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li><a class="btn btn-primary" href="index.html#newsletter">Newsletter</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap split" style="padding-top:64px;padding-bottom:112px;align-items:flex-start;gap:64px">
+  <section class="stack" aria-labelledby="ct-title" style="flex:1 1 380px;gap:20px">
+    <p class="eyebrow">Contact</p>
+    <h1 id="ct-title">Let's <em>talk home.</em></h1>
+    <p class="lede" style="font-size:18px">Send a question, a topic idea, or a collaboration or professional inquiry. Every message is read personally.</p>
+    <ul class="dot-list">
+      <li><span><strong>Reader questions</strong>: topics you'd like explained</span></li>
+      <li><span><strong>Collaborations</strong>: brands, creators, and home professionals</span></li>
+      <li><span><strong>Professional inquiries</strong>: speaking, media, and partnerships</span></li>
+    </ul>
+    <p class="notice">Content and replies are educational and are not legal, tax, or financial advice. Please don't include sensitive financial details in your message.</p>
+  </section>
+
+  <section class="contact-card" aria-label="Contact form" style="flex:1 1 460px">
+    <!-- Not connected yet. To make it send, add the form service's address as
+         action="..." method="POST" and update the handler in js/main.js (see README). -->
+    <form id="contact-form" class="contact-form" novalidate>
+      <div class="two-col">
+        <div class="field">
+          <label for="c-name">Name</label>
+          <input class="input" id="c-name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+          <span id="name-error" class="field-error" hidden>Please add your name.</span>
+        </div>
+        <div class="field">
+          <label for="c-email">Email</label>
+          <input class="input" id="c-email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+          <span id="email-error" class="field-error" hidden>Please enter a valid email.</span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="c-topic">What's this about?</label>
+        <select class="select" id="c-topic" name="topic">
+          <option value="question">A question</option>
+          <option value="collaboration">Collaboration</option>
+          <option value="professional">Professional inquiry</option>
+          <option value="other">Something else</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="c-msg">Message</label>
+        <textarea class="textarea" id="c-msg" name="message" rows="6" required aria-describedby="message-error"></textarea>
+        <span id="message-error" class="field-error" hidden>Please write a short message.</span>
+      </div>
+      <div class="btn-row" style="align-items:center;justify-content:space-between">
+        <p class="small" style="font-size:13px;flex:1 1 220px">See our <a href="privacy.html#privacy">Privacy Policy</a> for how messages will be handled.</p>
+        <button class="btn btn-primary" type="submit">Send message</button>
+      </div>
+    </form>
+
+    <div id="contact-done" class="stack" role="status" tabindex="-1" hidden>
+      <h2 style="font-size:34px;font-weight:600">Thank you, <span id="contact-first"></span>.</h2>
+      <p class="body-text">This contact form isn't connected yet, so your message was not sent. Messaging will be available soon.</p>
+      <button id="contact-reset" class="btn btn-outline" type="button" style="align-self:flex-start">Start over</button>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <span class="brand-name">Johnice Edwards</span>
+          <span class="brand-sub">Realty</span>
+        </a>
+        <p class="footer-tagline">Real Estate, Renovation &amp; Smarter Homeownership.</p>
+        <p style="font-size:15px;color:#CFC7BA">Michigan-based education and inspiration for everyday homeowners.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <div>
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="education.html">Real Estate Education</a></li>
+            <li><a href="improvements.html">Home Improvements</a></li>
+            <li><a href="resources.html">Homeowner Resources</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Connect</h2>
+          <ul>
+            <li><a href="about.html">About Johnice</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html#newsletter">Newsletter</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="privacy.html#privacy">Privacy Policy</a></li>
+            <li><a href="privacy.html#disclosures">Disclosures</a></li>
+            <li><a href="privacy.html#terms">Terms of Use</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-legal">
+      <p><strong>Licensing disclosure:</strong> Johnice Edwards is a licensed real estate professional in the State of Michigan, affiliated with American Dream Team Real Estate Brokers · 10520 River Rapids Ct, Fort Wayne, IN · <a href="tel:+12602421543">(260) 242-1543</a> · <a href="mailto:americandreamteamrebrokers@gmail.com">americandreamteamrebrokers@gmail.com</a>. Equal Housing Opportunity.</p>
+      <p>Content on this site is for general educational purposes only and is not legal, tax, financial, or lending advice. Consult a qualified professional about your situation.</p>
+      <p>© 2026 Johnice Edwards Realty · johniceedwardsrealty.com</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
