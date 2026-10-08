@@ -24,8 +24,8 @@ It's a plain HTML/CSS site with no build step, so any static host can serve it
 
 ## Adding photos
 
-Upload photos into `images/` using the exact file names listed in
-[`images/README.md`](images/README.md). Each one replaces its placeholder automatically.
+All site photos live in `images/`. To swap one, upload a replacement with the same file name
+(see [`images/README.md`](images/README.md)).
 
 ## Adding an article
 
@@ -59,7 +59,6 @@ These parts are built honestly: they tell visitors they aren't live yet.
 
 ## Before launch
 
-- Add photos (see `images/README.md`).
 - Finish the privacy policy and terms on `privacy.html` (have them reviewed).
 - Confirm the brokerage disclosure wording with your broker.
 
