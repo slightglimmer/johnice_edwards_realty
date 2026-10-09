@@ -54,6 +54,17 @@ window.CATEGORIES = [
 
 window.ARTICLES = [
   {
+    title: "I'm a Realtor, But I Don't Really Want to Sell Houses. I Just Love Real Estate.",
+    url: 'articles/i-love-real-estate-not-selling-houses.html',
+    category: 'diaries',
+    date: '2026-10-09',
+    readTime: '6 min read',
+    image: 'images/05-kitchen-table.jpg',
+    imageAlt: 'Open notebook and coffee mug on a butcher-block kitchen island',
+    excerpt: 'How my love of architecture, an unexpected career path, and buying my first home changed the way I see real estate.',
+    featured: true
+  },
+  {
     title: 'Understanding Home Equity: What It Is and How It Grows',
     url: 'articles/understanding-home-equity.html',
     category: 'money',
@@ -61,7 +72,6 @@ window.ARTICLES = [
     readTime: '7 min read',
     image: 'images/03-front-porch.jpg',
     imageAlt: 'Brick front porch with a wood door and potted ferns',
-    excerpt: 'How to estimate your equity, what builds it over time, and what to weigh before borrowing against it.',
-    featured: true
+    excerpt: 'How to estimate your equity, what builds it over time, and what to weigh before borrowing against it.'
   }
 ];

@@ -372,6 +372,9 @@ p { margin: 0; }
 .callout-sage .label { color: var(--sage-dark); }
 .callout-champagne { background: var(--champagne-light); }
 .callout-champagne .label { color: var(--champagne-dark); }
+.prose .pull-quote { font-family: var(--serif); font-size: 28px; line-height: 1.35; font-style: italic; color: var(--sage); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 20px 0; }
+.prose .closing-line { font-family: var(--serif); font-size: 26px; line-height: 1.4; font-weight: 600; color: var(--charcoal); }
+.prose .signature { font-family: var(--serif); font-style: italic; font-size: 24px; color: var(--sage); }
 .equation { font-family: var(--serif); font-size: 26px; line-height: 1.3; color: var(--charcoal); }
 
 /* ---------- Legal ---------- */
