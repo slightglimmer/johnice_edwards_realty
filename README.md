@@ -1,6 +1,6 @@
 # Johnice Edwards Realty
 
-The website for **johniceedwardsrealty.com**. *Real Estate, Renovation & Smarter Homeownership.*
+The website for **johniceedwardsrealty.com**. *Licensed to sell homes. More interested in everything else about them.*
 
 It's a plain HTML/CSS site with no build step, so any static host can serve it
 (GitHub Pages, Netlify, Cloudflare Pages, or a regular web host).
