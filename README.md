@@ -9,63 +9,50 @@ It's a plain HTML/CSS site with no build step, so any static host can serve it
 
 | Path | What it is |
 |---|---|
-| `index.html` | Home |
-| `education.html` | Real Estate Education (article list, search, category filters) |
-| `articles/` | One HTML file per full article |
-| `improvements.html` | Home Improvements |
-| `resources.html` | Homeowner Resources (all "Coming soon" for now) |
-| `about.html` | About Johnice |
-| `contact.html` | Contact form |
-| `privacy.html` | Privacy policy, disclaimers, licensing disclosure, terms |
-| `404.html` | "Page not found" page |
-| `images/` | **Site photos.** See `images/README.md` for file names and sizes |
+| `index.html` | Home: hero, featured story, categories, newsletter |
+| `blog.html` | All stories, with search and category filters |
+| `diaries.html`, `obsessed.html`, `technology.html`, `money.html` | The four category pages |
+| `articles/` | One HTML file per story |
+| `js/articles.js` | **The list of stories.** Add new posts here |
+| `about.html` | About me |
+| `contact.html` | Contact form (sends to Formspree) |
+| `improvements.html` | Home improvement guide (linked in the footer) |
+| `resources.html` | Homeowner tools, coming soon (linked in the footer) |
+| `privacy.html` | Privacy policy, terms, disclaimers, licensing disclosure |
+| `images/` | Site photos. See `images/README.md` |
 | `css/styles.css` | All styling. Colors are set once at the top |
-| `js/main.js` | Mobile menu, forms, article search and filters |
+| `js/main.js` | Story cards, forms, search, mobile menu |
 
-## Adding photos
+## Publishing a new story
 
-All site photos live in `images/`. To swap one, upload a replacement with the same file name
-(see [`images/README.md`](images/README.md)).
+1. Copy `articles/understanding-home-equity.html` to a new file, e.g. `articles/my-first-renovation.html`.
+2. Change the title, description, canonical link, date, category link, photo, headline and body text.
+3. Add the photo to `images/`.
+4. Open `js/articles.js` and add an entry at the top of `ARTICLES` (copy the existing one).
+   Use `category: 'diaries'`, `'obsessed'`, `'tech'` or `'money'`.
+   Move `featured: true` to the story you want in the big spot on the home page.
+5. Add the new page to `sitemap.xml`.
 
-## Adding an article
+The home page, blog page, category pages, story counts and search all update automatically.
 
-1. Copy `articles/understanding-home-equity.html` to a new file, e.g. `articles/closing-costs.html`.
-2. Change the `<title>`, description, canonical link, headline and body text.
-3. In `education.html`, find the article's card and change it from `<article class="card" ...>`
-   to `<a class="card lift" href="articles/closing-costs.html" ...>`. Replace the
-   "Full article coming soon" tag with `<span class="card-cta">Read the article →</span>`
-   and change the closing `</article>` to `</a>`.
-   For a brand-new topic, copy a whole card. Its `data-category` must match one of the
-   filter buttons.
-4. Add the new page to `sitemap.xml`.
+## Forms
 
-## Header and footer
+Both the contact form and the newsletter sign-up send to Formspree
+(`https://formspree.io/f/xwlvodrn`). Messages and sign-ups arrive by email and are listed in the
+Formspree dashboard, where they can be exported. The free plan allows 50 submissions a month.
+When the newsletter grows, move sign-ups to an email platform (Kit is free up to 10,000
+subscribers) by changing the newsletter form's `action` in `index.html`.
 
-Every page has its own copy of the header and footer. If you change a menu item or
-the footer text, make the same change on every page (search the project for the old text).
+## Future ideas
 
-## Not connected yet
-
-These parts are built honestly: they tell visitors they aren't live yet.
-
-- **Newsletter sign-up** (Home): checks the email address but doesn't save it.
-  Once you pick an email platform (Mailchimp, Kit, Flodesk, etc.), paste its
-  embed form code or connect it in the newsletter section of `js/main.js`.
-- **Contact form**: checks the fields but doesn't send. A form service such as Formspree
-  or Netlify Forms can be connected in `contact.html` and `js/main.js`.
-- **Resources**: the four tools are marked "Coming soon" with disabled buttons.
-- **Planned tools** (renovation assistant, maintenance reminders, Q&A guide, budgeting)
-  are listed only as roadmap items on the Resources page.
-
-## Before launch
-
-- Finish the privacy policy and terms on `privacy.html` (have them reviewed).
-- Confirm the brokerage disclosure wording with your broker.
+- AI-powered homeownership tools (listed as "planned" on `resources.html`).
 
 ## Publishing with GitHub Pages (free)
 
 1. In the repository on GitHub go to **Settings → Pages**.
 2. Under "Build and deployment", choose **Deploy from a branch**, pick the branch and `/ (root)`.
-3. To use johniceedwardsrealty.com, enter it under **Custom domain**, then update
-   the domain's DNS records as GitHub's instructions describe. That moves the domain
-   off your current website, so only do it when you're ready to switch.
+3. To use johniceedwardsrealty.com (registered at Namecheap), enter it under **Custom domain**,
+   then in Namecheap → Domain List → Manage → Advanced DNS add:
+   - four `A` records for host `@`: 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
+   - one `CNAME` record for host `www` pointing to `slightglimmer.github.io.`
+   and remove the old records that point to your current website.

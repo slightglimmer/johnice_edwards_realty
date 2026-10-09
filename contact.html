@@ -8,14 +8,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Figtree:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/articles.js" defer></script>
   <script src="js/main.js" defer></script>
   <title>Contact | Johnice Edwards Realty</title>
-  <meta name="description" content="Questions, collaborations, and professional inquiries for Johnice Edwards Realty.">
+  <meta name="description" content="Send Johnice Edwards a question, a story idea, a home to share, or a collaboration request.">
   <link rel="canonical" href="https://johniceedwardsrealty.com/contact.html">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
+<header class="site-header" data-active="contact">
   <div class="wrap header-inner">
     <a class="brand" href="index.html" aria-label="Johnice Edwards Realty, home">
       <span class="brand-name">Johnice Edwards</span>
@@ -26,13 +27,12 @@
     </button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <ul class="nav-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="education.html">Real Estate Education</a></li>
-        <li><a href="improvements.html">Home Improvements</a></li>
-        <li><a href="resources.html">Resources</a></li>
+        <li><a href="diaries.html">Homeowner Diaries</a></li>
+        <li><a href="obsessed.html">Homes I'm Obsessed With</a></li>
+        <li><a href="technology.html">Homes &amp; Technology</a></li>
+        <li><a href="money.html">Real Estate &amp; Money</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html" aria-current="page">Contact</a></li>
-        <li><a class="btn btn-primary" href="index.html#newsletter">Newsletter</a></li>
       </ul>
     </nav>
   </div>
@@ -42,19 +42,21 @@
   <section class="stack" aria-labelledby="ct-title" style="flex:1 1 380px;gap:20px">
     <p class="eyebrow">Contact</p>
     <h1 id="ct-title">Let's <em>talk home.</em></h1>
-    <p class="lede" style="font-size:18px">Send a question, a topic idea, or a collaboration or professional inquiry. Every message is read personally.</p>
+    <p class="lede" style="font-size:18px">Have a question, a story idea, or a home I need to see? Send me a note. I read every message myself.</p>
     <ul class="dot-list">
-      <li><span><strong>Reader questions</strong>: topics you'd like explained</span></li>
+      <li><span><strong>Questions &amp; story ideas</strong>: topics you'd like me to dig into</span></li>
+      <li><span><strong>Homes to share</strong>: a house or space you think I'd be obsessed with</span></li>
       <li><span><strong>Collaborations</strong>: brands, creators, and home professionals</span></li>
-      <li><span><strong>Professional inquiries</strong>: speaking, media, and partnerships</span></li>
     </ul>
-    <p class="notice">Content and replies are educational and are not legal, tax, or financial advice. Please don't include sensitive financial details in your message.</p>
+    <p class="notice">Replies are friendly and educational, not legal, tax, or financial advice. Please don't include sensitive financial details in your message.</p>
   </section>
 
   <section class="contact-card" aria-label="Contact form" style="flex:1 1 460px">
-    <!-- Not connected yet. To make it send, add the form service's address as
-         action="..." method="POST" and update the handler in js/main.js (see README). -->
-    <form id="contact-form" class="contact-form" novalidate>
+    <!-- Messages are delivered by Formspree to Johnice's email. -->
+    <form id="contact-form" class="contact-form" action="https://formspree.io/f/xwlvodrn" method="POST" novalidate>
+      <input type="hidden" name="_subject" value="New message from johniceedwardsrealty.com">
+      <input type="hidden" name="form" value="Contact">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="visually-hidden" aria-hidden="true">
       <div class="two-col">
         <div class="field">
           <label for="c-name">Name</label>
@@ -70,10 +72,10 @@
       <div class="field">
         <label for="c-topic">What's this about?</label>
         <select class="select" id="c-topic" name="topic">
-          <option value="question">A question</option>
-          <option value="collaboration">Collaboration</option>
-          <option value="professional">Professional inquiry</option>
-          <option value="other">Something else</option>
+          <option value="Question or story idea">A question or story idea</option>
+          <option value="A home to share">A home to share</option>
+          <option value="Collaboration">Collaboration</option>
+          <option value="Something else">Something else</option>
         </select>
       </div>
       <div class="field">
@@ -82,15 +84,16 @@
         <span id="message-error" class="field-error" hidden>Please write a short message.</span>
       </div>
       <div class="btn-row" style="align-items:center;justify-content:space-between">
-        <p class="small" style="font-size:13px;flex:1 1 220px">See our <a href="privacy.html#privacy">Privacy Policy</a> for how messages will be handled.</p>
+        <p class="small" style="font-size:13px;flex:1 1 220px">See the <a href="privacy.html#privacy">Privacy Policy</a> for how messages are handled.</p>
         <button class="btn btn-primary" type="submit">Send message</button>
       </div>
+      <p id="contact-fail" class="form-note error" role="alert" hidden>Sorry, your message didn't go through. Please try again in a moment.</p>
     </form>
 
     <div id="contact-done" class="stack" role="status" tabindex="-1" hidden>
       <h2 style="font-size:34px;font-weight:600">Thank you, <span id="contact-first"></span>.</h2>
-      <p class="body-text">This contact form isn't connected yet, so your message was not sent. Messaging will be available soon.</p>
-      <button id="contact-reset" class="btn btn-outline" type="button" style="align-self:flex-start">Start over</button>
+      <p class="body-text">Your message is on its way to me. I'll get back to you as soon as I can.</p>
+      <button id="contact-reset" class="btn btn-outline" type="button" style="align-self:flex-start">Send another message</button>
     </div>
   </section>
 </main>
@@ -103,39 +106,42 @@
           <span class="brand-name">Johnice Edwards</span>
           <span class="brand-sub">Realty</span>
         </a>
-        <p class="footer-tagline">Real Estate, Renovation &amp; Smarter Homeownership.</p>
-        <p style="font-size:15px;color:#CFC7BA">Michigan-based education and inspiration for everyday homeowners.</p>
+        <p class="footer-tagline">Licensed to sell homes. More interested in everything else about them.</p>
+        <p style="font-size:15px;color:#CFC7BA">A Michigan homeownership journal: projects, houses, home tech, and the money behind it all.</p>
       </div>
       <nav class="footer-nav" aria-label="Footer">
         <div>
-          <h2>Explore</h2>
+          <h2>Categories</h2>
           <ul>
-            <li><a href="education.html">Real Estate Education</a></li>
-            <li><a href="improvements.html">Home Improvements</a></li>
-            <li><a href="resources.html">Homeowner Resources</a></li>
+            <li><a href="diaries.html">The Homeowner Diaries</a></li>
+            <li><a href="obsessed.html">Homes I'm Obsessed With</a></li>
+            <li><a href="technology.html">Homes &amp; Technology</a></li>
+            <li><a href="money.html">Real Estate &amp; Money</a></li>
           </ul>
         </div>
         <div>
-          <h2>Connect</h2>
+          <h2>Explore</h2>
           <ul>
-            <li><a href="about.html">About Johnice</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">All stories</a></li>
+            <li><a href="improvements.html">Home Improvement Guide</a></li>
+            <li><a href="resources.html">Homeowner Tools</a></li>
             <li><a href="index.html#newsletter">Newsletter</a></li>
           </ul>
         </div>
         <div>
-          <h2>Legal</h2>
+          <h2>About</h2>
           <ul>
+            <li><a href="about.html">About Johnice</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li><a href="privacy.html#privacy">Privacy Policy</a></li>
-            <li><a href="privacy.html#disclosures">Disclosures</a></li>
-            <li><a href="privacy.html#terms">Terms of Use</a></li>
+            <li><a href="privacy.html#terms">Terms &amp; Disclosures</a></li>
           </ul>
         </div>
       </nav>
     </div>
     <div class="footer-legal">
       <p><strong>Licensing disclosure:</strong> Johnice Edwards is a licensed real estate professional in the State of Michigan, affiliated with American Dream Team Real Estate Brokers · 10520 River Rapids Ct, Fort Wayne, IN · <a href="tel:+12602421543">(260) 242-1543</a> · <a href="mailto:americandreamteamrebrokers@gmail.com">americandreamteamrebrokers@gmail.com</a>. Equal Housing Opportunity.</p>
-      <p>Content on this site is for general educational purposes only and is not legal, tax, financial, or lending advice. Consult a qualified professional about your situation.</p>
+      <p>Content on this site reflects personal experience and general education only. It is not legal, tax, financial, or lending advice.</p>
       <p>© 2026 Johnice Edwards Realty · johniceedwardsrealty.com</p>
     </div>
   </div>

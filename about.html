@@ -8,14 +8,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Figtree:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/articles.js" defer></script>
   <script src="js/main.js" defer></script>
-  <title>About Johnice Edwards | Johnice Edwards Realty</title>
-  <meta name="description" content="Johnice Edwards is a licensed Michigan real estate professional and homeowner making real estate knowledge more accessible.">
+  <title>About Me | Johnice Edwards Realty</title>
+  <meta name="description" content="Johnice Edwards is a licensed Michigan real estate professional and homeowner documenting what she's learning about homes, renovation, home technology, and real estate.">
   <link rel="canonical" href="https://johniceedwardsrealty.com/about.html">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
+<header class="site-header" data-active="about">
   <div class="wrap header-inner">
     <a class="brand" href="index.html" aria-label="Johnice Edwards Realty, home">
       <span class="brand-name">Johnice Edwards</span>
@@ -26,64 +27,63 @@
     </button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <ul class="nav-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="education.html">Real Estate Education</a></li>
-        <li><a href="improvements.html">Home Improvements</a></li>
-        <li><a href="resources.html">Resources</a></li>
+        <li><a href="diaries.html">Homeowner Diaries</a></li>
+        <li><a href="obsessed.html">Homes I'm Obsessed With</a></li>
+        <li><a href="technology.html">Homes &amp; Technology</a></li>
+        <li><a href="money.html">Real Estate &amp; Money</a></li>
         <li><a href="about.html" aria-current="page">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a class="btn btn-primary" href="index.html#newsletter">Newsletter</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 <main id="main">
-  <section class="wrap split" aria-labelledby="ab-title" style="padding-top:64px;padding-bottom:96px;gap:64px">
-    <div class="photo arch tone-stone" style="--ratio: 4 / 5; flex: 0 1 460px; min-width: 260px; border-radius: 240px 240px 28px 28px">
-      <img src="images/01-headshot.jpg" alt="Johnice Edwards" onerror="if(this.dataset.tried){this.remove()}else{this.dataset.tried=1;this.src=this.src.replace(/\.png$/,'.jpg')}">
-      <span class="photo-label">Photo 01 · Johnice's headshot</span>
+  <section class="wrap split" aria-labelledby="ab-title" style="padding-top:64px;padding-bottom:80px;gap:64px;align-items:flex-start">
+    <div class="photo arch tone-stone about-photo" style="--ratio: 4 / 5; flex: 0 1 440px; min-width: 260px; border-radius: 240px 240px 28px 28px">
+      <img src="images/01-headshot.jpg" alt="Johnice Edwards" onerror="this.remove()">
     </div>
-    <div class="stack" style="gap:22px">
-      <p class="eyebrow">About Johnice</p>
-      <h1 id="ab-title">Hi, I'm Johnice. <em>Welcome home.</em></h1>
-      <p class="body-text" style="font-size:19px">I'm a licensed Michigan real estate professional and a homeowner. I created this site because so much of what matters about owning a home, like how equity grows, why taxes change, and which repairs can't wait, is rarely explained in plain language.</p>
-      <p class="body-text">My goal is simple: to make real estate knowledge more accessible, so you can make decisions about your home with clarity and confidence, whether you're saving for your first place or planning your next renovation.</p>
-    </div>
+    <article class="stack about-text" style="gap:20px">
+      <p class="eyebrow">About Me</p>
+      <h1 id="ab-title">Hi, I'm <em>Johnice Edwards!</em></h1>
+      <p class="lede" style="max-width:none">I'm a licensed Michigan real estate professional, a homeowner, and someone who believes that understanding real estate is one of the most valuable skills you can have.</p>
+      <p>I bought my first home in my twenties, and that experience changed the way I looked at homeownership. I started realizing just how much there is to learn beyond getting approved for a mortgage and receiving your keys. From property taxes and building equity to unexpected repairs and renovations, owning a home comes with decisions that nobody really prepares you for.</p>
+      <p>As I've navigated my own homeownership journey, I've become increasingly interested in how homes work, how to improve them, and how real estate can create opportunities for long-term financial independence.</p>
+      <p>That's why I created this website.</p>
+      <p>I wanted to build something beyond a traditional real estate website filled with listings. My goal is to create an educational resource where future buyers and current homeowners can find practical information, explore home improvement ideas, and better understand the financial side of owning property.</p>
+      <p>I'm also passionate about technology and automation, and eventually I hope to incorporate AI-powered tools that make researching, planning, and managing homeownership even easier.</p>
+      <p>Whether you're saving for your first home, figuring out your next renovation, or exploring real estate as a way to build wealth, I hope this site helps you feel more informed, capable, and confident.</p>
+      <p class="about-signoff">Because owning a home is one thing. Understanding how to make the most of it is another.</p>
+    </article>
   </section>
 
-  <section class="surface" aria-labelledby="val-title">
+  <section class="surface" aria-labelledby="write-title">
     <div class="wrap section">
-      <h2 id="val-title" style="max-width:720px;margin-bottom:48px">What guides everything here</h2>
-      <div class="values">
-        <div><h3>Practical education</h3><p>Clear explanations you can use, with real steps instead of jargon and hype.</p></div>
-        <div><h3>Financial awareness</h3><p>Understanding the full cost of owning, from taxes and insurance to upkeep and upgrades.</p></div>
-        <div><h3>Confidence at home</h3><p>Feeling good about the place you live, and knowing how to care for it well.</p></div>
+      <div class="section-head">
+        <div class="stack">
+          <p class="eyebrow">What I write about</p>
+          <h2 id="write-title">Four corners of homeownership</h2>
+        </div>
+        <a class="text-link" href="blog.html">All stories →</a>
+      </div>
+      <div class="grid grid-4">
+        <a class="tile" href="diaries.html" style="background:var(--sage-light)"><strong>The Homeowner Diaries</strong><span style="color:#3E4A3D">My projects, repairs, mistakes, and lessons.</span></a>
+        <a class="tile" href="obsessed.html" style="background:var(--champagne-light)"><strong>Homes I'm Obsessed With</strong><span style="color:#4A3C24">Architecture and houses I can't stop thinking about.</span></a>
+        <a class="tile" href="technology.html" style="background:#ECE6DC"><strong>Homes &amp; Technology</strong><span style="color:var(--text)">Smart-home tech, automation, and experiments.</span></a>
+        <a class="tile" href="money.html" style="background:var(--sage-light)"><strong>Real Estate &amp; Money</strong><span style="color:#3E4A3D">Equity, taxes, investing, and mortgages.</span></a>
       </div>
     </div>
   </section>
 
-  <section class="wrap section split" aria-labelledby="what-title" style="align-items:flex-start;gap:48px">
-    <div class="stack" style="flex:1 1 360px;gap:14px">
-      <p class="eyebrow">About this site</p>
-      <h2 id="what-title" style="font-size:clamp(34px,3.6vw,48px)">An education-first resource</h2>
-      <p class="body-text">Johnice Edwards Realty is a place to learn, not a listings site. You'll find guides, renovation ideas, and homeowner tools here, shared to inform rather than to sell.</p>
-    </div>
-    <div class="grid" style="flex:2 1 520px;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
-      <a class="tile" href="education.html" style="background:var(--sage-light)"><strong>Real estate education</strong><span style="color:#3E4A3D">Buying, financing, taxes, equity, and Michigan topics.</span><span class="card-cta" style="color:#3F4F40;margin-top:6px">Start reading →</span></a>
-      <a class="tile" href="improvements.html" style="background:var(--champagne-light)"><strong>Home improvements</strong><span style="color:#4A3C24">Renovation ideas, maintenance, and budgets.</span><span class="card-cta" style="color:var(--champagne-dark);margin-top:6px">Get inspired →</span></a>
-    </div>
-  </section>
-
-  <section class="wrap" aria-labelledby="cta-title" style="padding-bottom:96px">
+  <section class="wrap" aria-labelledby="cta-title" style="padding-top:96px;padding-bottom:96px">
     <div class="band band-dark split" style="gap:32px">
       <div class="stack" style="gap:10px">
-        <h2 id="cta-title" style="font-size:clamp(32px,3.4vw,44px)">Have a question or an idea to collaborate on?</h2>
-        <p>I'd love to hear what topics would help you most.</p>
+        <h2 id="cta-title" style="font-size:clamp(32px,3.4vw,44px)">Want to follow along?</h2>
+        <p>Get new stories in your inbox, or send me a note. I'd love to hear what you're working on.</p>
       </div>
       <div class="btn-row" style="flex:0 1 auto">
-        <a class="btn btn-champagne" href="contact.html">Get in touch</a>
-        <a class="btn btn-ghost-light" href="index.html#newsletter">Join the newsletter</a>
+        <a class="btn btn-champagne" href="index.html#newsletter">Join the newsletter</a>
+        <a class="btn btn-ghost-light" href="contact.html">Say hello</a>
       </div>
     </div>
     <p class="small" style="margin-top:24px;font-size:13px">Licensed in the State of Michigan with American Dream Team Real Estate Brokers. See <a href="privacy.html#licensing">disclosures</a>.</p>
@@ -98,39 +98,42 @@
           <span class="brand-name">Johnice Edwards</span>
           <span class="brand-sub">Realty</span>
         </a>
-        <p class="footer-tagline">Real Estate, Renovation &amp; Smarter Homeownership.</p>
-        <p style="font-size:15px;color:#CFC7BA">Michigan-based education and inspiration for everyday homeowners.</p>
+        <p class="footer-tagline">Licensed to sell homes. More interested in everything else about them.</p>
+        <p style="font-size:15px;color:#CFC7BA">A Michigan homeownership journal: projects, houses, home tech, and the money behind it all.</p>
       </div>
       <nav class="footer-nav" aria-label="Footer">
         <div>
-          <h2>Explore</h2>
+          <h2>Categories</h2>
           <ul>
-            <li><a href="education.html">Real Estate Education</a></li>
-            <li><a href="improvements.html">Home Improvements</a></li>
-            <li><a href="resources.html">Homeowner Resources</a></li>
+            <li><a href="diaries.html">The Homeowner Diaries</a></li>
+            <li><a href="obsessed.html">Homes I'm Obsessed With</a></li>
+            <li><a href="technology.html">Homes &amp; Technology</a></li>
+            <li><a href="money.html">Real Estate &amp; Money</a></li>
           </ul>
         </div>
         <div>
-          <h2>Connect</h2>
+          <h2>Explore</h2>
           <ul>
-            <li><a href="about.html">About Johnice</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">All stories</a></li>
+            <li><a href="improvements.html">Home Improvement Guide</a></li>
+            <li><a href="resources.html">Homeowner Tools</a></li>
             <li><a href="index.html#newsletter">Newsletter</a></li>
           </ul>
         </div>
         <div>
-          <h2>Legal</h2>
+          <h2>About</h2>
           <ul>
+            <li><a href="about.html">About Johnice</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li><a href="privacy.html#privacy">Privacy Policy</a></li>
-            <li><a href="privacy.html#disclosures">Disclosures</a></li>
-            <li><a href="privacy.html#terms">Terms of Use</a></li>
+            <li><a href="privacy.html#terms">Terms &amp; Disclosures</a></li>
           </ul>
         </div>
       </nav>
     </div>
     <div class="footer-legal">
       <p><strong>Licensing disclosure:</strong> Johnice Edwards is a licensed real estate professional in the State of Michigan, affiliated with American Dream Team Real Estate Brokers · 10520 River Rapids Ct, Fort Wayne, IN · <a href="tel:+12602421543">(260) 242-1543</a> · <a href="mailto:americandreamteamrebrokers@gmail.com">americandreamteamrebrokers@gmail.com</a>. Equal Housing Opportunity.</p>
-      <p>Content on this site is for general educational purposes only and is not legal, tax, financial, or lending advice. Consult a qualified professional about your situation.</p>
+      <p>Content on this site reflects personal experience and general education only. It is not legal, tax, financial, or lending advice.</p>
       <p>© 2026 Johnice Edwards Realty · johniceedwardsrealty.com</p>
     </div>
   </div>

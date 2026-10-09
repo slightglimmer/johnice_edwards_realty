@@ -8,9 +8,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Figtree:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/articles.js" defer></script>
   <script src="../js/main.js" defer></script>
   <title>Understanding Home Equity: What It Is and How It Grows | Johnice Edwards Realty</title>
   <meta name="description" content="How to estimate your home equity, what builds it over time, and what to weigh before borrowing against it.">
+  <meta property="article:published_time" content="2026-10-09">
   <link rel="canonical" href="https://johniceedwardsrealty.com/articles/understanding-home-equity.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Understanding Home Equity: What It Is and How It Grows">
@@ -22,13 +24,14 @@
     "headline": "Understanding Home Equity: What It Is and How It Grows",
     "author": { "@type": "Person", "name": "Johnice Edwards" },
     "publisher": { "@type": "Organization", "name": "Johnice Edwards Realty" },
-    "image": "https://johniceedwardsrealty.com/images/03-front-porch.jpg"
+    "image": "https://johniceedwardsrealty.com/images/03-front-porch.jpg",
+    "datePublished": "2026-10-09"
   }
   </script>
 </head>
-<body>
+<body data-root="../">
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
+<header class="site-header" data-active="money">
   <div class="wrap header-inner">
     <a class="brand" href="../index.html" aria-label="Johnice Edwards Realty, home">
       <span class="brand-name">Johnice Edwards</span>
@@ -39,13 +42,12 @@
     </button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <ul class="nav-list">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../education.html" aria-current="page">Real Estate Education</a></li>
-        <li><a href="../improvements.html">Home Improvements</a></li>
-        <li><a href="../resources.html">Resources</a></li>
+        <li><a href="../diaries.html">Homeowner Diaries</a></li>
+        <li><a href="../obsessed.html">Homes I'm Obsessed With</a></li>
+        <li><a href="../technology.html">Homes &amp; Technology</a></li>
+        <li><a href="../money.html" aria-current="page">Real Estate &amp; Money</a></li>
         <li><a href="../about.html">About</a></li>
         <li><a href="../contact.html">Contact</a></li>
-        <li><a class="btn btn-primary" href="../index.html#newsletter">Newsletter</a></li>
       </ul>
     </nav>
   </div>
@@ -54,17 +56,16 @@
 <main id="main">
   <article>
     <header class="article-head">
-      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../education.html">Real Estate Education</a> <span aria-hidden="true">/</span> Home Equity</nav>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../blog.html">Journal</a> <span aria-hidden="true">/</span> <a href="../money.html">Real Estate &amp; Money</a></nav>
       <h1>Understanding Home Equity: What It Is and How It Grows</h1>
       <p class="lede" style="font-size:20px;max-width:none">Equity is one of the most talked-about parts of owning a home, and one of the least explained. Here's how to estimate yours, what builds it, and what to weigh before borrowing against it.</p>
-      <p class="small">By Johnice Edwards · 7 min read</p>
+      <p class="small">By Johnice Edwards · <time datetime="2026-10-09">October 9, 2026</time> · 7 min read</p>
     </header>
 
     <div class="article-banner">
       <div class="photo tone-champagne">
         <img src="../images/03-front-porch.jpg" alt="Brick front porch with a wood door and potted ferns" onerror="if(this.dataset.tried){this.remove()}else{this.dataset.tried=1;this.src=this.src.replace(/\.png$/,'.jpg')}">
-        <span class="photo-label">Photo 03 · Brick front porch, potted ferns</span>
-      </div>
+              </div>
     </div>
 
     <div class="prose">
@@ -115,14 +116,10 @@
 
   <section class="wrap" aria-labelledby="rel-title" style="padding-top:32px;padding-bottom:96px">
     <div class="section-head" style="margin-bottom:28px">
-      <h2 id="rel-title" style="font-size:40px">Keep learning</h2>
-      <a class="text-link" href="../education.html">All articles →</a>
+      <h2 id="rel-title" style="font-size:40px">Keep reading</h2>
+      <a class="text-link" href="../blog.html">All stories →</a>
     </div>
-    <div class="grid" style="gap:24px">
-      <div class="card card-bordered"><div class="card-body"><span class="kicker">Mortgages &amp; Financing</span><h3 style="font-size:24px">Fixed vs. Adjustable-Rate Mortgages</h3><span class="tag">Coming soon</span></div></div>
-      <div class="card card-bordered"><div class="card-body"><span class="kicker">Taxes &amp; Costs</span><h3 style="font-size:24px">The True Monthly Cost of Owning a Home</h3><span class="tag">Coming soon</span></div></div>
-      <div class="card card-bordered"><div class="card-body"><span class="kicker">Home Improvements</span><h3 style="font-size:24px">Upgrades that may help your home's value</h3><a class="text-link" href="../improvements.html#value">Read on the Improvements page →</a></div></div>
-    </div>
+    <div class="grid grid-fill" data-articles data-limit="3" data-exclude-current data-hide-empty></div>
   </section>
 </main>
 
@@ -134,39 +131,42 @@
           <span class="brand-name">Johnice Edwards</span>
           <span class="brand-sub">Realty</span>
         </a>
-        <p class="footer-tagline">Real Estate, Renovation &amp; Smarter Homeownership.</p>
-        <p style="font-size:15px;color:#CFC7BA">Michigan-based education and inspiration for everyday homeowners.</p>
+        <p class="footer-tagline">Licensed to sell homes. More interested in everything else about them.</p>
+        <p style="font-size:15px;color:#CFC7BA">A Michigan homeownership journal: projects, houses, home tech, and the money behind it all.</p>
       </div>
       <nav class="footer-nav" aria-label="Footer">
         <div>
-          <h2>Explore</h2>
+          <h2>Categories</h2>
           <ul>
-            <li><a href="../education.html">Real Estate Education</a></li>
-            <li><a href="../improvements.html">Home Improvements</a></li>
-            <li><a href="../resources.html">Homeowner Resources</a></li>
+            <li><a href="../diaries.html">The Homeowner Diaries</a></li>
+            <li><a href="../obsessed.html">Homes I'm Obsessed With</a></li>
+            <li><a href="../technology.html">Homes &amp; Technology</a></li>
+            <li><a href="../money.html">Real Estate &amp; Money</a></li>
           </ul>
         </div>
         <div>
-          <h2>Connect</h2>
+          <h2>Explore</h2>
           <ul>
-            <li><a href="../about.html">About Johnice</a></li>
-            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../blog.html">All stories</a></li>
+            <li><a href="../improvements.html">Home Improvement Guide</a></li>
+            <li><a href="../resources.html">Homeowner Tools</a></li>
             <li><a href="../index.html#newsletter">Newsletter</a></li>
           </ul>
         </div>
         <div>
-          <h2>Legal</h2>
+          <h2>About</h2>
           <ul>
+            <li><a href="../about.html">About Johnice</a></li>
+            <li><a href="../contact.html">Contact</a></li>
             <li><a href="../privacy.html#privacy">Privacy Policy</a></li>
-            <li><a href="../privacy.html#disclosures">Disclosures</a></li>
-            <li><a href="../privacy.html#terms">Terms of Use</a></li>
+            <li><a href="../privacy.html#terms">Terms &amp; Disclosures</a></li>
           </ul>
         </div>
       </nav>
     </div>
     <div class="footer-legal">
       <p><strong>Licensing disclosure:</strong> Johnice Edwards is a licensed real estate professional in the State of Michigan, affiliated with American Dream Team Real Estate Brokers · 10520 River Rapids Ct, Fort Wayne, IN · <a href="tel:+12602421543">(260) 242-1543</a> · <a href="mailto:americandreamteamrebrokers@gmail.com">americandreamteamrebrokers@gmail.com</a>. Equal Housing Opportunity.</p>
-      <p>Content on this site is for general educational purposes only and is not legal, tax, financial, or lending advice. Consult a qualified professional about your situation.</p>
+      <p>Content on this site reflects personal experience and general education only. It is not legal, tax, financial, or lending advice.</p>
       <p>© 2026 Johnice Edwards Realty · johniceedwardsrealty.com</p>
     </div>
   </div>

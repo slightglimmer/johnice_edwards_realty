@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Figtree:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/articles.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <title>All Stories | Johnice Edwards Realty</title>
+  <meta name="description" content="Every story from the Johnice Edwards Realty homeownership journal: home projects, beautiful houses, home technology, and real estate money.">
+  <link rel="canonical" href="https://johniceedwardsrealty.com/blog.html">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" data-active="blog">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Johnice Edwards Realty, home">
+      <span class="brand-name">Johnice Edwards</span>
+      <span class="brand-sub">Realty</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="diaries.html">Homeowner Diaries</a></li>
+        <li><a href="obsessed.html">Homes I'm Obsessed With</a></li>
+        <li><a href="technology.html">Homes &amp; Technology</a></li>
+        <li><a href="money.html">Real Estate &amp; Money</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="wrap" aria-labelledby="blog-title" style="padding-top:64px;padding-bottom:40px">
+    <div class="split" style="align-items:flex-end;gap:40px">
+      <div class="stack" style="flex:1 1 520px">
+        <p class="eyebrow">The Journal</p>
+        <h1 id="blog-title">Every story, <em>all in one place.</em></h1>
+        <p class="lede">Projects, houses, home tech, and money lessons, newest first.</p>
+      </div>
+      <div class="field" style="flex:0 1 400px">
+        <label for="article-search">Search stories</label>
+        <div class="search-box">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B655D" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
+          <input class="input" id="article-search" type="search" placeholder="Try “equity” or “kitchen”" autocomplete="off">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" aria-label="Filter by category" style="padding-bottom:32px">
+    <div class="chips">
+      <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="chip" type="button" data-filter="diaries" aria-pressed="false">The Homeowner Diaries</button>
+      <button class="chip" type="button" data-filter="obsessed" aria-pressed="false">Homes I'm Obsessed With</button>
+      <button class="chip" type="button" data-filter="tech" aria-pressed="false">Homes &amp; Technology</button>
+      <button class="chip" type="button" data-filter="money" aria-pressed="false">Real Estate &amp; Money</button>
+    </div>
+  </section>
+
+  <section class="wrap" aria-label="Stories" style="padding-bottom:96px">
+    <p id="article-count" class="small" aria-live="polite" style="margin-bottom:20px"></p>
+    <div id="article-list" class="grid grid-fill" data-articles></div>
+    <div id="article-nomatch" class="empty-state" hidden>
+      <p style="font-family:var(--serif);font-size:28px;font-weight:600">No stories here yet.</p>
+      <p class="body-text" style="font-size:15px">Try a different word or category, or tell me what you'd like to read about.</p>
+      <div class="btn-row" style="justify-content:center">
+        <button id="article-reset" class="btn btn-outline" type="button">Show all stories</button>
+        <a class="btn btn-primary" href="contact.html">Suggest a topic</a>
+      </div>
+    </div>
+    <noscript><p class="body-text">Please turn on JavaScript to see the list of stories.</p></noscript>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <span class="brand-name">Johnice Edwards</span>
+          <span class="brand-sub">Realty</span>
+        </a>
+        <p class="footer-tagline">Licensed to sell homes. More interested in everything else about them.</p>
+        <p style="font-size:15px;color:#CFC7BA">A Michigan homeownership journal: projects, houses, home tech, and the money behind it all.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <div>
+          <h2>Categories</h2>
+          <ul>
+            <li><a href="diaries.html">The Homeowner Diaries</a></li>
+            <li><a href="obsessed.html">Homes I'm Obsessed With</a></li>
+            <li><a href="technology.html">Homes &amp; Technology</a></li>
+            <li><a href="money.html">Real Estate &amp; Money</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="blog.html">All stories</a></li>
+            <li><a href="improvements.html">Home Improvement Guide</a></li>
+            <li><a href="resources.html">Homeowner Tools</a></li>
+            <li><a href="index.html#newsletter">Newsletter</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>About</h2>
+          <ul>
+            <li><a href="about.html">About Johnice</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html#privacy">Privacy Policy</a></li>
+            <li><a href="privacy.html#terms">Terms &amp; Disclosures</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-legal">
+      <p><strong>Licensing disclosure:</strong> Johnice Edwards is a licensed real estate professional in the State of Michigan, affiliated with American Dream Team Real Estate Brokers · 10520 River Rapids Ct, Fort Wayne, IN · <a href="tel:+12602421543">(260) 242-1543</a> · <a href="mailto:americandreamteamrebrokers@gmail.com">americandreamteamrebrokers@gmail.com</a>. Equal Housing Opportunity.</p>
+      <p>Content on this site reflects personal experience and general education only. It is not legal, tax, financial, or lending advice.</p>
+      <p>© 2026 Johnice Edwards Realty · johniceedwardsrealty.com</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

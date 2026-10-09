@@ -8,19 +8,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Figtree:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/articles.js" defer></script>
   <script src="js/main.js" defer></script>
-  <title>Johnice Edwards Realty | Real Estate, Renovation &amp; Smarter Homeownership</title>
-  <meta name="description" content="Real estate insights, home improvement inspiration, and practical guidance to help you make confident decisions about your home.">
+  <title>Johnice Edwards Realty | A Homeownership Journal</title>
+  <meta name="description" content="Licensed to sell homes. More interested in everything else about them. A Michigan homeownership journal about home projects, beautiful houses, home technology, and real estate money.">
   <link rel="canonical" href="https://johniceedwardsrealty.com/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Johnice Edwards Realty">
-  <meta property="og:description" content="Real Estate, Renovation & Smarter Homeownership.">
+  <meta property="og:description" content="Licensed to sell homes. More interested in everything else about them.">
   <meta property="og:url" content="https://johniceedwardsrealty.com/">
   <meta property="og:image" content="https://johniceedwardsrealty.com/images/02-hero-living-room.jpg">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
+<header class="site-header" data-active="home">
   <div class="wrap header-inner">
     <a class="brand" href="index.html" aria-label="Johnice Edwards Realty, home">
       <span class="brand-name">Johnice Edwards</span>
@@ -31,13 +32,12 @@
     </button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <ul class="nav-list">
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="education.html">Real Estate Education</a></li>
-        <li><a href="improvements.html">Home Improvements</a></li>
-        <li><a href="resources.html">Resources</a></li>
+        <li><a href="diaries.html">Homeowner Diaries</a></li>
+        <li><a href="obsessed.html">Homes I'm Obsessed With</a></li>
+        <li><a href="technology.html">Homes &amp; Technology</a></li>
+        <li><a href="money.html">Real Estate &amp; Money</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a class="btn btn-primary" href="index.html#newsletter">Newsletter</a></li>
       </ul>
     </nav>
   </div>
@@ -46,191 +46,124 @@
 <main id="main">
   <section class="wrap hero split" aria-labelledby="hero-title">
     <div class="stack rise" style="gap:28px">
-      <p class="eyebrow">Real Estate, Renovation &amp; Smarter Homeownership</p>
-      <h1 id="hero-title">Love Where You Live. <em>Understand What You Own.</em></h1>
-      <p class="lede">Real estate insights, home improvement inspiration, and practical guidance to help you make confident decisions about your home.</p>
+      <p class="eyebrow">A homeownership journal by Johnice Edwards</p>
+      <h1 id="hero-title">Licensed to sell homes. <em>More interested in everything else about them.</em></h1>
+      <p class="lede">Follow along as I document what I'm learning about homes: my own projects and mistakes, the houses I can't stop thinking about, the tech that makes a home smarter, and the money behind it all.</p>
       <div class="btn-row">
-        <a class="btn btn-primary" href="education.html">Start Learning</a>
-        <a class="btn btn-outline" href="improvements.html">Explore Home Ideas</a>
+        <a class="btn btn-primary" href="blog.html">Read the journal</a>
+        <a class="btn btn-outline" href="about.html">About me</a>
       </div>
     </div>
     <div class="hero-media">
       <div class="photo arch tone-sage" style="--ratio: 4 / 4.6">
-        <img src="images/02-hero-living-room.jpg" alt="Sunlit living room with a linen sofa and oak floors" onerror="if(this.dataset.tried){this.remove()}else{this.dataset.tried=1;this.src=this.src.replace(/\.png$/,'.jpg')}">
-        <span class="photo-label">Photo 02 · Sunlit living room</span>
+        <img src="images/02-hero-living-room.jpg" alt="Sunlit living room with a cream linen sofa, sheer curtains and plants" onerror="this.remove()">
       </div>
-      <a class="hero-card lift" href="articles/understanding-home-equity.html">
-        <span class="eyebrow" style="font-size:12px">This week's read</span>
-        <strong>Understanding Home Equity</strong>
-        <span class="card-cta">Read the article →</span>
+      <a id="latest-link" class="hero-card lift" href="blog.html">
+        <span class="eyebrow" style="font-size:12px">Latest story</span>
+        <strong>Read the journal</strong>
+        <span class="card-cta">Read it →</span>
       </a>
     </div>
   </section>
 
-  <section class="surface" aria-label="What you'll find here">
-    <div class="wrap pillars">
-      <a class="pillar" href="education.html">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4F6250" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 4l9 6.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-5h4v5"/></svg>
-        <div><strong>Learn</strong><span>Plain-language guides to buying, financing, taxes, and equity.</span></div>
-      </a>
-      <a class="pillar" href="improvements.html">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4F6250" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M6 20V9h12v11"/><path d="M9 9V5h6v4"/><path d="M10 14h4"/></svg>
-        <div><strong>Improve</strong><span>Renovation ideas, budgets, and when to DIY or hire a pro.</span></div>
-      </a>
-      <a class="pillar" href="resources.html">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4F6250" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="2"/><path d="M9 8.5l1.5 1.5L13 7.5"/><path d="M9 14h6"/><path d="M9 17h4"/></svg>
-        <div><strong>Maintain</strong><span>Checklists and planners to care for what you own.</span></div>
-      </a>
-    </div>
-  </section>
-
-  <section class="wrap section" aria-labelledby="featured-title" style="padding-bottom:40px">
+  <section class="wrap" aria-labelledby="featured-title" style="padding-top:24px;padding-bottom:96px">
     <div class="section-head">
       <div class="stack">
         <p class="eyebrow">Featured</p>
-        <h2 id="featured-title">Smart reads for homeowners</h2>
+        <h2 id="featured-title">On my mind lately</h2>
       </div>
-      <a class="text-link" href="education.html">View all articles →</a>
+      <a class="text-link" href="blog.html">All stories →</a>
     </div>
-
-    <a class="card feature-card lift" href="articles/understanding-home-equity.html">
-      <div class="photo tone-champagne">
-        <img src="images/03-front-porch.jpg" alt="Brick front porch with a wood door and potted ferns" loading="lazy" onerror="if(this.dataset.tried){this.remove()}else{this.dataset.tried=1;this.src=this.src.replace(/\.png$/,'.jpg')}">
-        <span class="photo-label">Photo 03 · Brick front porch, potted ferns</span>
-      </div>
-      <div class="card-body">
-        <span class="kicker">Home Equity · 7 min read</span>
-        <h3>Understanding Home Equity: What It Is and How It Grows</h3>
-        <p style="font-size:16px">Equity is one of the most talked-about and least understood parts of owning a home. Here's how to estimate yours, what builds it, and what to weigh before borrowing against it.</p>
-        <span class="card-cta">Read the article →</span>
-      </div>
-    </a>
-
-    <div class="grid">
-      <article class="card">
-        <div class="photo tone-sage">
-          <img src="images/04-fall-bungalow.jpg" alt="White farmhouse with a front porch surrounded by autumn maples" loading="lazy" onerror="if(this.dataset.tried){this.remove()}else{this.dataset.tried=1;this.src=this.src.replace(/\.png$/,'.jpg')}">
-          <span class="photo-label">Photo 04 · Michigan bungalow in autumn</span>
-        </div>
-        <div class="card-body">
-          <span class="kicker">Michigan Housing</span>
-          <h3>Michigan Property Taxes Explained: SEV, Taxable Value &amp; the Principal Residence Exemption</h3>
-          <span class="tag">Coming soon</span>
-        </div>
-      </article>
-      <article class="card">
-        <div class="photo tone-sand">
-          <img src="images/05-kitchen-table.jpg" alt="Open notebook and coffee mug on a butcher-block kitchen island" loading="lazy" onerror="if(this.dataset.tried){this.remove()}else{this.dataset.tried=1;this.src=this.src.replace(/\.png$/,'.jpg')}">
-          <span class="photo-label">Photo 05 · Kitchen table, notebook, coffee</span>
-        </div>
-        <div class="card-body">
-          <span class="kicker">Homeownership Costs</span>
-          <h3>The True Monthly Cost of Owning a Home, Beyond the Mortgage</h3>
-          <span class="tag">Coming soon</span>
-        </div>
-      </article>
-      <article class="card">
-        <div class="photo tone-stone">
-          <img src="images/06-keys.jpg" alt="House keys with a house-shaped keychain on a wooden table" loading="lazy" onerror="if(this.dataset.tried){this.remove()}else{this.dataset.tried=1;this.src=this.src.replace(/\.png$/,'.jpg')}">
-          <span class="photo-label">Photo 06 · Keys on a wooden entry table</span>
-        </div>
-        <div class="card-body">
-          <span class="kicker">First-Time Buyers</span>
-          <h3>Pre-Qualified vs. Pre-Approved: What's the Difference?</h3>
-          <span class="tag">Coming soon</span>
-        </div>
-      </article>
-    </div>
+    <div id="featured-article"></div>
   </section>
 
-  <section class="wrap" aria-labelledby="insp-title" style="padding-top:72px">
-    <div class="band band-sage">
+  <section class="surface" aria-labelledby="cat-title">
+    <div class="wrap section">
       <div class="section-head">
         <div class="stack">
-          <p class="eyebrow" style="color:#3F4F40">Renovation Inspiration</p>
-          <h2 id="insp-title">Beautiful, practical spaces to dream about</h2>
-          <p style="color:#3E4A3D">Ideas chosen for how they live day to day, not just how they photograph.</p>
+          <p class="eyebrow">Explore</p>
+          <h2 id="cat-title">What I write about</h2>
         </div>
-        <a class="btn btn-dark" href="improvements.html">See home improvements</a>
       </div>
-      <div class="grid grid-4 inspo">
-        <figure>
-          <div class="photo tone-cream" style="--ratio: 3 / 4">
-            <img src="images/12-insp-kitchen.jpg" alt="Kitchen with oak upper cabinets, white lower cabinets and brass hardware" loading="lazy" onerror="if(this.dataset.tried){this.remove()}else{this.dataset.tried=1;this.src=this.src.replace(/\.png$/,'.jpg')}">
-            <span class="photo-label">Photo 12</span>
+      <div class="category-grid">
+        <a class="category-tile lift" href="diaries.html">
+          <div class="photo tone-sage" style="--ratio: 4 / 5"><img src="images/16-imp-kitchen.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+          <div class="category-tile-body">
+            <span class="kicker" data-count="diaries"></span>
+            <h3>The Homeowner Diaries</h3>
+            <p>Renovations, repairs, lessons learned, mistakes, and progress on my own home.</p>
           </div>
-          <figcaption><strong>Warm kitchens</strong><span>Oak uppers, brass hardware</span></figcaption>
-        </figure>
-        <figure>
-          <div class="photo tone-champagne" style="--ratio: 3 / 4">
-            <img src="images/13-insp-bathroom.jpg" alt="Spa-style bathroom with stone tile, walk-in shower and freestanding tub" loading="lazy" onerror="if(this.dataset.tried){this.remove()}else{this.dataset.tried=1;this.src=this.src.replace(/\.png$/,'.jpg')}">
-            <span class="photo-label">Photo 13</span>
+        </a>
+        <a class="category-tile lift" href="obsessed.html">
+          <div class="photo tone-champagne" style="--ratio: 4 / 5"><img src="images/04-fall-bungalow.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+          <div class="category-tile-body">
+            <span class="kicker" data-count="obsessed"></span>
+            <h3>Homes I'm Obsessed With</h3>
+            <p>Beautiful architecture, historic homes, unusual layouts, and dream properties.</p>
           </div>
-          <figcaption><strong>Calm bathrooms</strong><span>Handmade tile, walk-in shower</span></figcaption>
-        </figure>
-        <figure>
-          <div class="photo tone-cream" style="--ratio: 3 / 4">
-            <img src="images/14-insp-entryway.jpg" alt="Wood entry bench with wall hooks and a shoe shelf" loading="lazy" onerror="if(this.dataset.tried){this.remove()}else{this.dataset.tried=1;this.src=this.src.replace(/\.png$/,'.jpg')}">
-            <span class="photo-label">Photo 14</span>
+        </a>
+        <a class="category-tile lift" href="technology.html">
+          <div class="photo tone-stone" style="--ratio: 4 / 5"><img src="images/19-office.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+          <div class="category-tile-body">
+            <span class="kicker" data-count="tech"></span>
+            <h3>Homes &amp; Technology</h3>
+            <p>Smart-home tech, automation, AI, security, and gadgets that make a home work better.</p>
           </div>
-          <figcaption><strong>Hardworking entries</strong><span>Wood bench, wall hooks, shoe shelf</span></figcaption>
-        </figure>
-        <figure>
-          <div class="photo tone-taupe" style="--ratio: 3 / 4">
-            <img src="images/15-insp-front-door.jpg" alt="Blue front door with a lantern porch light" loading="lazy" onerror="if(this.dataset.tried){this.remove()}else{this.dataset.tried=1;this.src=this.src.replace(/\.png$/,'.jpg')}">
-            <span class="photo-label">Photo 15</span>
+        </a>
+        <a class="category-tile lift" href="money.html">
+          <div class="photo tone-sand" style="--ratio: 4 / 5"><img src="images/06-keys.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+          <div class="category-tile-body">
+            <span class="kicker" data-count="money"></span>
+            <h3>Real Estate &amp; Money</h3>
+            <p>Equity, property taxes, rentals, investing, and the financial side of owning a home.</p>
           </div>
-          <figcaption><strong>Curb appeal</strong><span>Painted front door, porch light</span></figcaption>
-        </figure>
+        </a>
       </div>
     </div>
   </section>
 
-  <section class="wrap section" aria-labelledby="res-title">
+  <section class="wrap section" aria-labelledby="latest-title">
     <div class="section-head">
       <div class="stack">
-        <p class="eyebrow">Homeowner Resources</p>
-        <h2 id="res-title">Tools to keep you organized</h2>
+        <p class="eyebrow">Latest</p>
+        <h2 id="latest-title">Recent stories</h2>
       </div>
-      <a class="text-link" href="resources.html">Browse resources →</a>
+      <a class="text-link" href="blog.html">All stories →</a>
     </div>
-    <div class="grid grid-4">
-      <div class="card card-bordered"><div class="card-body"><span class="tag">Coming soon</span><h3>Home Maintenance Checklist</h3><p>Seasonal to-dos for Michigan homes.</p></div></div>
-      <div class="card card-bordered"><div class="card-body"><span class="tag">Coming soon</span><h3>Renovation Budget Planner</h3><p>Plan costs, contingency, and priorities.</p></div></div>
-      <div class="card card-bordered"><div class="card-body"><span class="tag">Coming soon</span><h3>First-Time Buyer Checklist</h3><p>From saving to closing day, step by step.</p></div></div>
-      <div class="card card-bordered"><div class="card-body"><span class="tag">Coming soon</span><h3>Home Improvement Cost Estimator</h3><p>Rough ranges before you call a contractor.</p></div></div>
+    <div class="grid grid-fill" data-articles data-limit="6" data-exclude-featured data-hide-empty></div>
+  </section>
+
+  <section class="wrap split" aria-labelledby="about-title" style="padding-bottom:96px">
+    <div class="photo arch tone-stone" style="--ratio: 4 / 5; flex: 0 1 380px; min-width: 260px; border-radius: 200px 200px 24px 24px">
+      <img src="images/01-headshot.jpg" alt="Johnice Edwards" loading="lazy" onerror="this.remove()">
+    </div>
+    <div class="stack">
+      <p class="eyebrow">Hi, I'm Johnice</p>
+      <h2 id="about-title">A homeowner who can't stop learning about homes</h2>
+      <p class="body-text" style="font-size:18px">I'm a licensed Michigan real estate professional and a homeowner. I bought my first home in my twenties, and it opened my eyes to how much there is to learn after you get the keys. This is where I document my experiences, discoveries, projects, and lessons along the way.</p>
+      <a class="text-link" href="about.html">Read my story →</a>
     </div>
   </section>
 
-  <section id="newsletter" class="wrap" aria-labelledby="nl-title" style="padding-bottom:96px;scroll-margin-top:100px">
+  <section id="newsletter" class="wrap" aria-labelledby="nl-title" style="padding-bottom:112px;scroll-margin-top:100px">
     <div class="band band-champagne split" style="gap:40px">
       <div class="stack" style="gap:14px">
         <p class="eyebrow">The Homeowner's Letter</p>
-        <h2 id="nl-title">Smarter homeownership, delivered to your inbox</h2>
-        <p class="body-text">New guides, renovation ideas, and seasonal maintenance reminders. No spam, unsubscribe anytime.</p>
+        <h2 id="nl-title">Follow along from your inbox</h2>
+        <p class="body-text">New stories, home projects, and things I'm learning, sent now and then. No spam, unsubscribe anytime.</p>
       </div>
-      <form class="newsletter-form js-newsletter stack" style="gap:12px" novalidate>
+      <form class="newsletter-form js-newsletter stack" style="gap:12px" action="https://formspree.io/f/xwlvodrn" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="New newsletter subscriber">
+        <input type="hidden" name="form" value="Newsletter">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="visually-hidden" aria-hidden="true">
         <label for="nl-email" style="font-size:14px;font-weight:600">Email address</label>
         <div class="row">
           <input class="input" id="nl-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
           <button class="btn btn-primary" type="submit">Subscribe</button>
         </div>
         <p class="form-note js-form-note" role="status" hidden></p>
-        <p class="small" style="font-size:13px">By subscribing you agree to our <a href="privacy.html#privacy">Privacy Policy</a>.</p>
+        <p class="small" style="font-size:13px">By subscribing you agree to the <a href="privacy.html#privacy">Privacy Policy</a>.</p>
       </form>
-    </div>
-  </section>
-
-  <section class="wrap split" aria-labelledby="about-title" style="padding-bottom:112px">
-    <div class="photo arch tone-stone" style="--ratio: 4 / 5; flex: 0 1 380px; min-width: 260px; border-radius: 200px 200px 24px 24px">
-      <img src="images/01-headshot.jpg" alt="Johnice Edwards" loading="lazy" onerror="if(this.dataset.tried){this.remove()}else{this.dataset.tried=1;this.src=this.src.replace(/\.png$/,'.jpg')}">
-      <span class="photo-label">Photo 01 · Johnice's headshot</span>
-    </div>
-    <div class="stack">
-      <p class="eyebrow">Meet Johnice</p>
-      <h2 id="about-title">Real estate knowledge, made approachable</h2>
-      <p class="body-text" style="font-size:18px">Johnice Edwards is a licensed Michigan real estate professional and a homeowner. This site shares the practical knowledge that helps everyday people feel confident about one of the biggest purchases of their lives, and about caring for it once it's theirs.</p>
-      <a class="text-link" href="about.html">More about Johnice →</a>
     </div>
   </section>
 </main>
@@ -243,39 +176,42 @@
           <span class="brand-name">Johnice Edwards</span>
           <span class="brand-sub">Realty</span>
         </a>
-        <p class="footer-tagline">Real Estate, Renovation &amp; Smarter Homeownership.</p>
-        <p style="font-size:15px;color:#CFC7BA">Michigan-based education and inspiration for everyday homeowners.</p>
+        <p class="footer-tagline">Licensed to sell homes. More interested in everything else about them.</p>
+        <p style="font-size:15px;color:#CFC7BA">A Michigan homeownership journal: projects, houses, home tech, and the money behind it all.</p>
       </div>
       <nav class="footer-nav" aria-label="Footer">
         <div>
-          <h2>Explore</h2>
+          <h2>Categories</h2>
           <ul>
-            <li><a href="education.html">Real Estate Education</a></li>
-            <li><a href="improvements.html">Home Improvements</a></li>
-            <li><a href="resources.html">Homeowner Resources</a></li>
+            <li><a href="diaries.html">The Homeowner Diaries</a></li>
+            <li><a href="obsessed.html">Homes I'm Obsessed With</a></li>
+            <li><a href="technology.html">Homes &amp; Technology</a></li>
+            <li><a href="money.html">Real Estate &amp; Money</a></li>
           </ul>
         </div>
         <div>
-          <h2>Connect</h2>
+          <h2>Explore</h2>
           <ul>
-            <li><a href="about.html">About Johnice</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">All stories</a></li>
+            <li><a href="improvements.html">Home Improvement Guide</a></li>
+            <li><a href="resources.html">Homeowner Tools</a></li>
             <li><a href="index.html#newsletter">Newsletter</a></li>
           </ul>
         </div>
         <div>
-          <h2>Legal</h2>
+          <h2>About</h2>
           <ul>
+            <li><a href="about.html">About Johnice</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li><a href="privacy.html#privacy">Privacy Policy</a></li>
-            <li><a href="privacy.html#disclosures">Disclosures</a></li>
-            <li><a href="privacy.html#terms">Terms of Use</a></li>
+            <li><a href="privacy.html#terms">Terms &amp; Disclosures</a></li>
           </ul>
         </div>
       </nav>
     </div>
     <div class="footer-legal">
       <p><strong>Licensing disclosure:</strong> Johnice Edwards is a licensed real estate professional in the State of Michigan, affiliated with American Dream Team Real Estate Brokers · 10520 River Rapids Ct, Fort Wayne, IN · <a href="tel:+12602421543">(260) 242-1543</a> · <a href="mailto:americandreamteamrebrokers@gmail.com">americandreamteamrebrokers@gmail.com</a>. Equal Housing Opportunity.</p>
-      <p>Content on this site is for general educational purposes only and is not legal, tax, financial, or lending advice. Consult a qualified professional about your situation.</p>
+      <p>Content on this site reflects personal experience and general education only. It is not legal, tax, financial, or lending advice.</p>
       <p>© 2026 Johnice Edwards Realty · johniceedwardsrealty.com</p>
     </div>
   </div>
