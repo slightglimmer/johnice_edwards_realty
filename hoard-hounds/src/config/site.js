@@ -11,10 +11,9 @@ export const SITE = {
   stateCode: 'MI',
   region: 'Metro Detroit',
 
-  // PLACEHOLDER contact details. 555-01xx numbers are reserved for fiction, so nobody gets called by mistake.
-  phoneDisplay: '(313) 555-0142',
-  phoneHref: 'tel:+13135550142',
-  email: 'hello@hoardhounds.com',
+  phoneDisplay: '(734) 589-7627',
+  phoneHref: 'tel:+17345897627',
+  email: 'johnice.edward@gmail.com',
   // Optional, e.g. 'Mon–Sat, 8am–6pm'. Leave empty to hide hours on the site.
   hours: '',
 

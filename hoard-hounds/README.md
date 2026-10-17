@@ -13,7 +13,7 @@ Search the project for `PLACEHOLDER` to find each one.
 
 | What | Where |
 |---|---|
-| Phone number (currently a fake `(313) 555-0142`) and email | `src/config/site.js` |
+| Phone number and email (set to (734) 589-7627 and johnice.edward@gmail.com) | `src/config/site.js` |
 | Business hours (hidden until you add them) | `src/config/site.js` → `hours` |
 | Domain (`https://www.hoardhounds.com`) | `src/config/site.js`, `index.html`, `privacy.html`, `public/robots.txt`, `public/sitemap.xml` |
 | Illustrations standing in for photos | `public/images/` (see section 5) |
